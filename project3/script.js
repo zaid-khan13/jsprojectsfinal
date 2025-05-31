@@ -44,7 +44,7 @@ function updateProgress() {
 
 // Create function to stop the video
 function stopVideo() {
-  video.currentTime = 0;
+    video.currentTime = 0;
   video.pause();
 }
 
@@ -57,10 +57,12 @@ function setVideoProgress() {
 // 1. Event listener for video player
 video.addEventListener("click", toggleVideo);
 video.addEventListener("pause", updateIcon);
+video.addEventListener("play", updateIcon);
 video.addEventListener("timeupdate", updateProgress);
 
 // 2. Event listener for play button
 play.addEventListener("click", toggleVideo);
+
 
 // 3. Event listner for stop button
 stop.addEventListener("click", stopVideo);
